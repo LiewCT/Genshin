@@ -28,7 +28,7 @@ function changePageStyle(character) {
         char.style.backgroundColor = "rgb(139 185 255)";
         charName.style.backgroundColor = "rgb(139 185 255)";
     }
-    video.src = "/video/" + character + ".mp4";
+    video.src = "../Genshin/video/" + character + ".mp4";
     video.load();
 }
 
