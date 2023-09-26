@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 7</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      // Retrieve the URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+
+      // Get the values from the URL parameters
+      const name = urlParams.get('name');
+      const address = urlParams.get('address');
+      const telNum = urlParams.get('TelNum');
+      const email = urlParams.get('email');
+      const delivery = urlParams.get('Delivery');
+      const pizzaNum = urlParams.get('pizzaNum');
+
+      // Update the HTML table with the retrieved values
+      document.getElementById('name').textContent = name;
+      document.getElementById('address').textContent = address;
+      document.getElementById('telNum').textContent = telNum;
+      document.getElementById('email').textContent = email;
+      document.getElementById('delivery').textContent = delivery;
+      document.getElementById('pizzaNum').textContent = pizzaNum;
+    });
+  </script>
+</head>
+<body>
+  <h1>Submitted Form Values</h1>
+  <table>
+    <tr>
+      <th>Field</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>Name:</td>
+      <td><span id="name"></span></td>
+    </tr>
+    <tr>
+      <td>Address:</td>
+      <td><span id="address"></span></td>
+    </tr>
+    <tr>
+      <td>Telephone Number:</td>
+      <td><span id="telNum"></span></td>
+    </tr>
+    <tr>
+      <td>Email:</td>
+      <td><span id="email"></span></td>
+    </tr>
+    <tr>
+      <td>Delivery:</td>
+      <td><span id="delivery"></span></td>
+    </tr>
+    <tr>
+      <td>Number of Pizzas:</td>
+      <td><span id="pizzaNum"></span></td>
+    </tr>
+  </table>
+</body>
+</html>
