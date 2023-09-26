@@ -280,10 +280,6 @@ header{
     border-left: 1px solid red;
 }
 
-.flex{
-    display: flex;
-}
-
 .padding{
     display: flex;
     text-align: center;
@@ -291,15 +287,6 @@ header{
     flex-direction: column;
     width: 80%;
     float: left;
-}
-
-#圣遗物评分,#角色配队,#原神学院,#伤害计算器,:lang(ch){
-    letter-spacing: 0.5em;
-    font-size: 3em;
-    font-family:kaiti;
-    padding-top: 100px;
-    transition: 1s;
-    color: #fff;
 }
 
 #char{
