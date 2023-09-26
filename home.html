@@ -38,10 +38,12 @@
                     fix_box.style.display = "block"
                     fix_box.classList.add("slideToRight")
                     fix_box.classList.remove("slideToLeft")
+                    pagestyleButton.innerHTML = "关闭"
                     x -= 1
                 }else{
                     fix_box.classList.remove("slideToRight")
                     fix_box.classList.add("slideToLeft")
+                    pagestyleButton.innerHTML = "展开"
                     x += 1
                 }
             })
