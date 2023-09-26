@@ -7,10 +7,6 @@ html{
     scroll-behavior: smooth;
 }
 
-body{
-    height: 1000vh;
-}
-
 #preloader,:lang(ch){
     display: flex;
     flex-direction: column;
