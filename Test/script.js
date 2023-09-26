@@ -1,5 +1,5 @@
 // Check if the user has seen the image before
-const hasSeenImage = localStorage.getItem('hasSeenImage');
+const hasSeenImage = localStorage.getItem('hasSeenImage'); //null,true
 
 if (!hasSeenImage) {
   // If the user hasn't seen the image, show it
@@ -17,4 +17,5 @@ if (!hasSeenImage) {
   // If the user has seen the image before, hide the button
   const showButton = document.getElementById('showButton');
   showButton.style.display = 'none';
+  image.style.display = 'block';
 }

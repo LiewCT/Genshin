@@ -46,15 +46,16 @@ html{
  }
 
 main{
-    height: inherit;
+    height: fit-content;
     max-width: 100%;
-    position: absolute;
+    position:absolute;
     top: 100px;
     left:15%;
     right: 0;
     bottom: 0;
     background-size: contain;
     background-color: #000;
+    overflow: visible;
 }
 
 header{

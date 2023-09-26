@@ -8,7 +8,6 @@ function changePageStyle(character) {
     // pre = document.getElementById("preloader-img");
     video = document.getElementById("charVideo");
     charName = document.getElementById("charName");
-
     if (character === "hutao") {
         charName.innerHTML = "胡桃<br><span class='EngChar'>Hutao</span>";
         char.style.backgroundColor = "rgb(200,10,0)";
