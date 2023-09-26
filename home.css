@@ -190,25 +190,7 @@ header{
     transition: all 0.3s;
 }
 
-#hutao:hover{
-    max-width:220px;
-    height:150px;
-    margin-right: 1px;
-    filter: brightness(140%);
-}
-#qiqi:hover{
-    max-width:220px;
-    height:150px;
-    margin-right: 1px;
-    filter: brightness(140%);
-}
-#yaeMiko:hover{
-    max-width:220px;
-    height:150px;
-    margin-right: 1px;
-    filter: brightness(140%);
-}
-#ganYu:hover{
+#hutao:hover, #qiqi:hover, #yaeMiko:hover, #ganYu:hover{
     max-width:220px;
     height:150px;
     margin-right: 1px;
@@ -280,13 +262,24 @@ header{
     border-left: 1px solid red;
 }
 
-.padding{
+#AritificialRating,#TeamMaker,#TeyvatUni,#DamangeCalculator,:lang(ch){
+    letter-spacing: 0.5em;
+    font-size: 3em;
+    font-family:kaiti;
+    padding-top: 100px;
+    transition: 1s;
+    color: #fff;
+
+}
+
+.content{
     display: flex;
     text-align: center;
     align-items: center;
     flex-direction: column;
     width: 80%;
     float: left;
+    -webkit-text-stroke: 1px #ff4949;
 }
 
 #char{
