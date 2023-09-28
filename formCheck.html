@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Check</title>
+    <link rel="icon" type="x-icon" href="/img/genshinLogo.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #bbb;
+            font-size: 2em;
+        }
+
+        table {
+            margin: 10px;
+            border: 1px solid black;
+            background-color: aliceblue;
+            width: 100%;
+            max-width: 100%;
+            table-layout: fixed; /* Added for consistent cell widths */
+        }
+
+        td span {
+            max-width: 100%;
+            overflow-wrap: break-word;
+        }
+
+        .wrapper{
+            display: flex;
+            justify-content: center;
+        }
+
+        .border {
+            border: 1px solid black;
+        }
+
+        .center{
+            text-align: center;
+        }
+
+        .swidth{
+            width: 20%;
+        }
+
+        .bwidth{
+            width: 78%;
+        }
+
+        .backButton{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: black;
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #eee;
+            border-radius: 40px;
+        }
+
+        button{
+            font-size: 1.5em;
+            border-radius: 40px;
+            border: none;
+            outline: none;
+        }
+
+        .button:hover{
+            background-image: url("img/Rick/rick-roll-rick-rolled.gif");
+            background-size: contain;
+            cursor: pointer;
+        }
+
+        .feedback-cell {
+            overflow-x: auto;
+        }
+
+        /* Mobile Devices (up to 425px) */
+        @media only screen and (max-width: 425px) {
+            body{
+                font-size: 1em;
+            }
+        }
+
+        /* Tablet Devices (768px) */
+        @media only screen and (min-width: 426px) and (max-width: 1024px) {
+            body{
+                font-size: 1em;
+            }
+        }
+
+        /* Laptop and Desktop Devices (1025px and above) */
+        @media only screen and (min-width: 1025px) {
+            /* Add responsive CSS rules for larger screens here if needed */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Check Information</h1>
+        <div class="wrapper">
+            <table>
+                <tr>
+                    <td class="swidth">Name</td>
+                    <td>:</td>
+                    <td class="border bwidth"><span id="name"></span></td>
+                </tr>
+
+                <tr>
+                    <td class="swidth">Waifu</td>
+                    <td>:</td>
+                    <td class="border bwidth"><span id="waifu"></span></td>
+                </tr>
+
+                <tr>
+                    <td class="swidth">Feedback</td>
+                    <td>:</td>
+                    <td class="border bwidth feedback-cell" ><span id="feedback"></span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="wrapper">
+            <a class="bwidth button backButton" href="feedback.html">Back</a>
+            <button class="bwidth button">Submit</button>
+        </div>
+    </main>
+</body>
+<script>
+    function getData() {
+        const urlParams = new URLSearchParams(window.location.search);
+
+        const name = urlParams.get('name')
+        const waifu = urlParams.get('waifu')
+        const feedback = urlParams.get('feedback')
+
+        document.getElementById("name").textContent = name;
+        document.getElementById("waifu").textContent = waifu;
+        document.getElementById("feedback").textContent = feedback;
+    }
+    window.addEventListener("DOMContentLoaded", getData());
+</script>
+</html>

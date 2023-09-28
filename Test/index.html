@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>One-Time Image</title>
+  <title>RickRoll</title>
 </head>
 <body>
   <button id="showButton">Show Image</button>
-  <img id="image" src="your-image.jpg" alt="Your Image" style="display: none;">
+  <img id="image" src="/img/Character/yaeMiko/yae-miko-kawaii-fox-form-ow4jsdvaayyxymjo.gif" alt="Your Image" style="display: none;">
   <a href="ClickMe.html"><h2>Click Me!</h2></a>
-  <video autoplay controls loop src = "../video/ganYu.mp4" type="video/mp4"></video>
+  <video id = "video" autoplay loop src = "../video/Rick/Rick Astley - Never Gonna Give You Up (Official Music Video).mp4" type="video/mp4"></video>
+  <script>
+      var video = document.getElementById("video")
+      video.volume = 0.1;
+  </script>
   <script src="script.js"></script>
 </body>
 </html>

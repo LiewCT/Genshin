@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="icon" type="x-icon" href="img/genshinLogo.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #999;
+        }
+
+        form {
+            font-size: 2em;
+            padding: 50px;
+            border-radius: 20px;
+            background-color: aliceblue;
+        }
+
+        table {
+            width: 100%; /* Adjust to make the table responsive */
+        }
+
+        input, textarea {
+            width: 100%;
+            line-height: 2em;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .height {
+            height: 100vh;
+        }
+
+        .button {
+            width: 100%;
+            line-height: 30px;
+            border: 1px solid black;
+            outline: none;
+            border-radius: 40px;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+
+        .button:hover {
+            background-color: #ccc;
+        }
+
+        .button:focus {
+            background-color: #ccc;
+        }
+
+        #timer{
+            -webkit-text-stroke: #000 0.5px;
+        }
+
+        /* Mobile Devices (up to 425px) */
+        @media only screen and (max-width: 425px) {
+            .wrapper.margin {
+                margin-bottom: 10px;
+            }
+
+            form{
+                padding: 20px;
+            }
+        }
+
+        /* Tablet Devices (768px) */
+        @media only screen and (min-width: 426px) and (max-width: 1024px) {
+            .wrapper.margin {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Laptop and Desktop Devices (1025px and above) */
+        @media only screen and (min-width: 1025px) {
+            .wrapper.margin {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="wrapper height">
+            <div class="wrapper margin">
+                <p>TIMER</p>
+                <h1 id="timer">10</h1>
+            </div>
+            <img id="RickImg" style="display: none;width: 150px;" src="/img/Rick/rick-roll-rick-rolled.gif" alt="RickRoll">
+            <audio volume="0.1" id = "RickAudio" src="/audio/Rick Astley - Never Gonna Give You Up (Official Music Video) - 128.mp3" type="audio/mp3"></audio>
+            <form action="formCheck.html" target="_self">
+                <table>
+                    <tr>
+                        <td style="width: 20%;"><label for="name">Name</label></td>
+                        <td>:</td>
+                        <td style="width: 80%;"><input required type="text" id="name" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 20%;"><label for="waifu">Waifu</label></td>
+                        <td>:</td>
+                        <td style="width: 80%;"><input required type="text" id="waifu" name="waifu"></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 20%;"><label for="feedback">Feedback</label></td>
+                        <td>:</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><textarea rows="5" cols="75" type="text" id="feedback" name="feedback" placeholder="(妈的，你敢乱填)"></textarea></td>
+                    </tr>
+                </table>
+                <button class="button" type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <script>
+        const timer = document.getElementById("timer");
+        const audio = document.getElementById("RickAudio");
+        const image = document.getElementById("RickImg");
+    
+        let countdown = 10;
+        let colorIndex = 0;
+        let count = 0;
+        const colors = ["blue", "red"]; 
+    
+        function updateTimer() {
+            timer.innerText = countdown;
+            timer.style.color = colors[colorIndex];
+            count++;
+
+            if (countdown < 6) {
+                colorIndex = (colorIndex + 1) % colors.length;
+            }
+            if (count === 2) {
+                countdown--;
+                count = 0;
+            }
+    
+            if (countdown < 0) {
+                clearInterval(interval);
+                audio.volume = 0.1;
+                audio.play();
+                audio.setAttribute("controls","");
+                timer.style.display = "none";
+                image.style.display = "block";
+            }
+        }
+    
+        updateTimer();
+        interval = setInterval(updateTimer, 500);
+    </script>
+    
+</body>
+</html>
