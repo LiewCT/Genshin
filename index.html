@@ -3,80 +3,138 @@
         <head>
             <title>原神</title>
             <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="icon" type="image/x-icon" href="img/genshinLogo.png">
-            <style>
-                *{
-                    margin: 0;
-                    box-sizing: border-box;
-                }
-                
-                body{
-                    background-image: radial-gradient(white,grey) ;
-                    background-size:cover;
-                    height: 100%;
-                }
-                
-                p,:lang(ch){
-                    text-align: center;
-                    padding-right: 500px;
-                    padding-top: 50px;
-                    padding-bottom: 50px;
-                    font-weight: bold;
-                    font-size: 3em;
-                    font-family: kaiti;
-                }
+            <style>* {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                background-image: radial-gradient(white, grey);
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+            }
+            
+            main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+            }
+            
+            .wrapper {
+                text-align: center;
+                width: 100%;
+                height: 100%;
+            }
+            
+            .choose,
+            :lang(ch) {
+                font-weight: bold;
+                font-size: 1em;
+                font-family: kaiti;
+            }
+            
+            .card {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+            
+            .card img {
+                width: 100%;
+            }
 
-                .WAIFU{
-                    font-family:Georgia, 'Times New Roman', Times, serif;
-                }
+            .card img:hover{
+                width: 101%;
+                border: #000 solid 1px;
+            }
+            
+            .card a {
+                display: flex;
+                align-items: center;
+                width: 100%;
+            }
+            
+            .button {
+                display: block;
+                font-size: 1em;
+                border-radius: 30px;
+                width: 100%;
+                background-color: #ccc;
+                text-decoration: none;
+                color: #000;
+            }
 
-                .row{
-                    display: flex;
-                    text-align: center;
-                    justify-content: center;
-                }
+            .button:hover{
+                font-size: 1.1em;
+                filter: brightness(95%);
+                transition: 0.2s;
+                cursor: pointer;
+                border: #000 solid 1px;
+            }
 
-                #images{
-                    max-width: 100%;
-                    max-height: 100%;
-                }
+            @media only screen and (max-width: 379px){
+                .wrapper p{
+                    margin: 20px;
+            }}
 
-                img{
-                    max-width: 100%;
-                    max-height: 100%;
-                }
-
-                .card{
-                    width: 30%; 
-                    height: 300px;
-                    margin: 10px; 
-                    padding: 5px; 
-                    border: solid 2px black;
-                    border-radius: 5px;
-                    box-shadow: 5px 10px 20px rgb(48, 48, 48);
-                    transition: 0.3s;
-                }
-
-                .card:hover{
-                    height: 305px;
-                    border: solid 5px black;
-                    cursor: pointer;
-                }
-
+            @media only screen and (min-width: 380px) and (max-width: 420px){
+                .wrapper {
+                    width: 90%;
+            }
+            }
+            @media only screen and (min-width: 421px) and (max-width: 768px){
+                .wrapper {
+                    width: 80%;
+            }
+            }
+            @media only screen and (min-width: 480px) and (max-width: 768px){
+                .wrapper {
+                    width: 70%;
+            }
+            }
+            @media only screen and (min-width: 550px) and (max-width: 768px){
+                .wrapper {
+                    width: 60%;
+            }
+            }  
+            @media only screen and (min-width: 640px) and (max-width: 768px){
+                .wrapper {
+                    width: 50%;
+            }
+           }
+            @media only screen and (min-width: 769px) and (max-width: 1024px){
+                .wrapper {
+                    width: 40%;
+            }
+          }
+            @media only screen and (min-width: 950px){
+                .wrapper {
+                    width: 28%;
+            }}
             </style>
         </head>
     <body>
         <main>
-            <p>选择你的 <span class="WAIFU">WAIFU</span> : </p>
-            <div id="images">
-                    <div class="row">
-                        <a class="card" href="home.html" onclick="changePageStyle(hutao)"><img src="../Genshin/img/Character/hutao/胡桃.webp" alt="img"></a>
-                        <a class="card" href="home.html" onclick="changePageStyle(qiqi)"><img src="../Genshin/img/Character/qiqi/七七看椰奶.jpg" alt="img"></a>
-                    </div>
-                    <div class="row">
-                        <a class="card" href="home.html" onclick="changePageStyle(yaeMiko)"><img src="../Genshin/img/Character/yaeMiko/八重神子.jpg" alt="img"></a>
-                        <a class="card" href="home.html" onclick="changePageStyle(ganYu)"><img src="../Genshin/img/Character/ganYu/甘雨日落.jpg" alt="img"></a>
-                    </div>
+            <div class="wrapper">
+                <p class="choose">选择你的 <span>WAIFU / HUSBANDO</span> : </p>
+                <div class="card">
+                    <a href="home.html" onclick="localStorage.setItem('user1','hutao')"><img src="img/Character/hutao/hutao-hug.jpeg" alt="img"></a>
+                    <a href="home.html" onclick="localStorage.setItem('user1','qiqi')"><img src="img/Character/qiqi/qiqi-hold-coconut.jpg" alt="img"></a>
+                </div>
+                <div class="card">
+                    <a href="home.html" onclick="localStorage.setItem('user1','yaeMiko')"><img src="img/Character/yaeMiko/yaeMiko-sitting_tree.webp" alt="img"></a>
+                    <a href="home.html" onclick="localStorage.setItem('user1','ganYu')"><img src="img/Character/ganYu/ganyu_classic_background.jpg" alt="img"></a>
+                </div>
+                <a href="moreWaifu.html" class="button" title="未完成">MORE</a>
             </div>
        </main>
     <script src="home.js"></script>
