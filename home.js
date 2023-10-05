@@ -17,25 +17,25 @@ function changePageStyle() {
     const characterStyles = {
         hutao: {
             backgroundColor: "rgb(200, 10, 0)",
-            gifSrc: "/img/Character/hutao/hu-tao-dance.gif",
+            gifSrc: "../Genshin/img/Character/hutao/hu-tao-dance.gif",
             mandarinName: "胡桃",
             englishName: "HUTAO"
         },
         qiqi: {
             backgroundColor: "rgb(139, 185, 255)",
-            gifSrc: "/img/Character/qiqi/qiqi-waiting.gif",
+            gifSrc: "../Genshin/img/Character/qiqi/qiqi-waiting.gif",
             mandarinName: "七七",
             englishName: "QIQI"
         },
         yaeMiko: {
             backgroundColor: "rgb(255, 154, 190)",
-            gifSrc: "/img/Character/yaeMiko/yaeMiko_Meow.gif",
+            gifSrc: "../Genshin/img/Character/yaeMiko/yaeMiko_Meow.gif",
             mandarinName: "八重神子",
             englishName: "YAE MIKO"
         },
         ganYu: {
             backgroundColor: "rgb(139, 185, 255)",
-            gifSrc: "/img/Character/ganYu/ganyu_profile.gif",
+            gifSrc: "../Genshin/img/Character/ganYu/ganyu_profile.gif",
             mandarinName: "甘雨",
             englishName: "GAN YU"
         }
