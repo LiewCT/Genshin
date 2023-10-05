@@ -118,9 +118,12 @@ function setItem(name) {
 
 //Update date
 const update = document.getElementById("update");
-var day, month, year;
-day = 5; 
-month = "October"; ; 
+var day, month, year, version;
+version = 1.1
+;
+day = 5
+; 
+month = "October";
 year = 2023; 
 var date = `${day} ${month} ${year}`;
-update.innerHTML = `Updated by date <em>${date}</em>`;
+update.innerHTML = `Updated by date <em>${date}</em> <br> Version ${version}`;
